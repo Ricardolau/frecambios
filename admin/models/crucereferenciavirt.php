@@ -5,7 +5,7 @@ defined('_JEXEC') or die;
 
  
 
-class FrecambiosoModelCrucereferenciavirt extends JModelAdmin
+class FrecambiosModelCrucereferenciavirt extends JModelAdmin
 {
         /**
          * Devuelve una referencia al objeto Table,.
