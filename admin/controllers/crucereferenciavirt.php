@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
  
 // Importar librería de controladores de formulario de Joomla
-//~ jimport('joomla.application.component.controllerform');
+jimport('joomla.application.component.controllerform');
  
 /**
  *Controlador Virtuemartcruce
@@ -22,7 +22,7 @@ class FrecambiosControllerCrucereferenciavirt extends JControllerForm
 		// Get the model
 		$model = $this->getModel();
  
-		$return = $model->virtuemartcruce($pks);
+		$return = $model->frecambios($pks);
  
 		// Redirect to the list screen.
 		$this->setRedirect(JRoute::_('index.php?option=com_frecambios&view=crucereferenciavirt', false));

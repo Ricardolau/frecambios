@@ -1,14 +1,13 @@
 <?php
 // No permitir el acceso directo al archivo
-defined('_JEXEC') or die;
+defined('_JEXEC') or die('Restricted access');
 
 // Importar la librería table de Joomla
 //~ jimport('joomla.database.table');
-
 /**
- * Clase Vehiculo Table Cruces con virtuemart
+ * Clase Crucerecambiosvirt Table Cruces con virtuemart
  */
-class FrecambiosTablecrucereferenciavirt extends JTable
+class FrecambiosTableCrucereferenciavirt extends JTable
 {
         /**
          * Constructor

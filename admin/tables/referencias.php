@@ -5,7 +5,7 @@ defined('_JEXEC') or die('Restricted access');
 // Importar la librería table de Joomla
 //~ jimport('joomla.database.table');
 /**
- * Clase Nodelo Table ( Modelo vehiculo)
+ * Clase Referencia Table ( Referencia de Fabricantes)
  */
 class FrecambiosTableReferencias extends JTable
 {
