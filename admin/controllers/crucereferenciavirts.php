@@ -18,7 +18,7 @@ class FrecambiosControllerCrucereferenciavirts extends JControllerAdmin
          */
 
          
-        public function getModel($name = 'Crucerecambiosvirt', $prefix = 'FrecambiosModel') 
+        public function getModel($name = 'Crucereferenciavirt', $prefix = 'FrecambiosModel') 
         {
         
                 $model = parent::getModel($name, $prefix, array('ignore_request' => true));
