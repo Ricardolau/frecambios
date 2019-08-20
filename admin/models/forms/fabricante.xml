@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fieldset>
+                <field
+					name="id"
+					type="hidden"
+                />
+                <field
+					name="fabricante"
+					type="text"
+					label="COM_FRECAMBIOS_FABRICANTE_NOMBRE_LABEL"
+					description="COM_FRECAMBIO_FABRICANTE_NOMBRE_DESC"
+					size="40"
+					class="inputbox"
+					default=""
+					required="true"
+                />
+                <field
+					name="logo"
+					type="media"
+					label="COM_FRECAMBIOS_FABRICANTE_LOGO_LABEL"
+					description="COM_FRECAMBIOS_FABRICANTE_LOGO_DESC"
+				/>
+        </fieldset>
+</form>

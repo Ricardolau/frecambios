@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_FRECAMBIOS_FILTER_SEARCH_LABEL_REFERENCIA"
+			description="COM_FRECAMBIOS_FILTER_SEARCH_DESC_REFERENCIA"
+			hint="COM_FRECAMBIOS_FILTER_SEARCH_LABEL_REFERENCIA"
+		/>
+
+		<field 
+				name="idMarca" 
+				type="marca" 
+				label="COM_FRECAMBIOS_REFERENCIA_LABEL"   
+				class="chzn-select"
+				onchange="frecambios.updateSelect(this, 'filter_idReferencia', 'referencia'); return false;"
+		>
+				<option value="">Seleccione una Marca</option>
+                </field>
+              
+	</fields>
+
+	<fields name="list">		
+            
+                <field name="fullordering" 
+                       type="hidden">
+                </field>
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

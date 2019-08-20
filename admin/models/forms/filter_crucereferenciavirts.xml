@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_FRECAMBIOS_FILTER_SEARCH_LABEL_REFERENCIA"
+			description="COM__FRECAMBIOS_FILTER_SEARCH_DESC_REFERENCIA"
+			hint="COM_FRECAMBIOS_FILTER_SEARCH_LABEL_REFERENCIA"
+		/>
+                 <field 
+                        name="idProductos" 
+                        type="productos" 
+                        label="COM_VEHICULO_CRUCE_VIRTUEMART_HEADING_PRODUCT"   
+                        class="chzn-select"
+                        onchange="this.form.submit();"
+                        >
+                        <option value="">Seleccione un Producto</option>
+                </field> 
+                <field 
+                        name="idFabricante" 
+                        type="fabricante" 
+                        label="COM_FRECAMBIOS_FABRICANTE_CRUCE_LABEL"   
+                        class="chzn-select"
+                        onchange="Vehiculo.updateSelect(this, 'filter_idFabricante', 'fabricantes'); return false;"
+                >
+                        <option value="">Seleccione una Fabricante</option>
+                </field>
+              
+                <field 
+                        name="idReferencia" 
+                        type="referencia" 
+                        label="COM_FRECAMBIOS_REFERENCIA_CRUCE_LABEL"   
+                        class="chzn-select"
+                        onchange="Vehiculo.updateSelect(this, 'filter_idReferencia', 'referencias'); return false;"
+                        >
+                        <option value="">Seleccione un Referencia</option>
+                </field> 
+                
+				
+	</fields>
+
+	<fields name="list">		
+            
+                <field name="fullordering" 
+                       type="hidden">
+                </field>
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>
