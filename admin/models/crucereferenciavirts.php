@@ -42,24 +42,24 @@ class FrecambiosModelCrucereferenciavirts extends JModelList
                         ->join('left', '#__frecambio_fabricantes as fa ON (re.idFabricante = fa.id)');
                 
 
-		// Filter by search in title
-		$search = $this->getState('filter.search');
-		if (!empty($search))
-		{
-			if (stripos($search, 'id:') === 0)
-			{
-                                // Search id:1234
-				$query->where('cr.id = ' . (int) substr($search, 3));
-			}elseif (stripos($search, 'id_producto:') === 0)	{
-                                // Search id:1234
-				$query->where('cr.virtuemart_product_id = ' . (int) substr($search, 12));
-			} else {
-                                // Search %abcd%
-				$search = $db->quote('%' . str_replace(' ', '%', $db->escape(trim($search), true) . '%'));
-				$query->where('virt.product_name LIKE ' . $search );
-			}
-		}                    
-				// Producto filter                
+                // Filter by search in title
+                $search = $this->getState('filter.search');
+                if (!empty($search))
+                {
+                    if (stripos($search, 'id:') === 0)
+                    {
+                                        // Search id:1234
+                        $query->where('cr.id = ' . (int) substr($search, 3));
+                    }elseif (stripos($search, 'id_producto:') === 0)	{
+                                        // Search id:1234
+                        $query->where('cr.virtuemart_product_id = ' . (int) substr($search, 12));
+                    } else {
+                                        // Search %abcd%
+                        $search = $db->quote('%' . str_replace(' ', '%', $db->escape(trim($search), true) . '%'));
+                        $query->where('virt.product_name LIKE ' . $search );
+                    }
+                }                    
+                // Producto filter                
                 $idProductos = $this->getState('filter.idProductos');
                 if (is_numeric($idProductos)) {
                        $query->where('cr.virtuemart_product_id = ' . (int) $idProductos); 
@@ -79,9 +79,9 @@ class FrecambiosModelCrucereferenciavirts extends JModelList
                 
                 // Add the list ordering clause.                
                 $listOrder = $this->getState('list.ordering', 'cr.id');                
-				$listDirn = $db->escape($this->getState('list.direction', 'DESC'));                                                
+                $listDirn = $db->escape($this->getState('list.direction', 'DESC'));                                                
                 $query->order($db->escape($listOrder) . ' ' . $listDirn);                
-                
+                    
                 return $query;
         }                       
         

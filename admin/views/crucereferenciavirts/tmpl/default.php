@@ -36,6 +36,6 @@ $listDirn       = $this->escape($this->state->get('list.direction', 'DESC'));
         <input type="hidden" name="task" value="" />
         <input type="hidden" name="boxchecked" value="0" />
          <?php echo JHtml::_('form.token'); ?>
-        <input type = "hidden" name = "view" value = "crucereferenciavirt"  /> 
+        <input type = "hidden" name = "view" value = "crucereferenciavirts"  /> 
 
 </form>

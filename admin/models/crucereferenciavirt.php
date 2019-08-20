@@ -16,7 +16,7 @@ class FrecambiosModelCrucereferenciavirt extends JModelAdmin
          * @return      JTable  Objeto de base de datos
          * @since       2.5
          */
-        public function getTable($type = 'Crucereferenciavirt', $prefix = 'FabricanterecambioTable', $config = array()) 
+        public function getTable($type = 'Crucereferenciavirt', $prefix = 'FrecambiosTable', $config = array()) 
         {
                 return JTable::getInstance($type, $prefix, $config);
         }

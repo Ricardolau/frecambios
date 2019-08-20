@@ -19,13 +19,15 @@ JFactory::getDocument()->addScriptDeclaration("
         <fieldset class="adminform">
                 <legend><?php echo JText::_( 'Cruce de fabricantes  con producto de virtuemart' ); ?></legend>
                 <ul class="adminformlist">
-<?php echo '<pre>';
-        print_r($this->form);
-      echo '</pre>';?>
+<?php
+    //~ echo '<pre>';
+    //~ print_r($this->form);
+    //~ echo '</pre>';
+?>
       
-<?php /*foreach($this->form->getFieldset() as $field): ?>
+<?php foreach($this->form->getFieldset() as $field): ?>
                         <li><?php echo $field->label;echo $field->input;?></li>
-<?php endforeach;*/ ?>
+<?php endforeach; ?>
                 </ul>
         </fieldset>
         <div>

@@ -3,7 +3,8 @@
 defined('_JEXEC') or die;
 
 // Importar la biblioteca view de Joomla
-jimport('joomla.application.component.view');
+//~ jimport('joomla.application.component.view');
+JLoader::register('FrecambiosHelper', JPATH_ADMINISTRATOR . '/components/com_frecambios/helpers/frecambios.php');
 
 /**
  * Vista Vehiculos Marcas  */
@@ -53,10 +54,9 @@ class FrecambiosViewFabricantes extends JViewLegacy
                 // Ponemos el nombre del titulo de la vista y el icono que seleccionemos.
                 // El icono es uno que tenemos en la carpeta /media/com_vehiculo 
 			    JToolbarHelper::title(JText::_('Fabricantes de recambios'),'fabricantes');
-                JToolbarHelper::deleteList('', 'fabricante.delete');
+                JToolbarHelper::deleteList('JGLOBAL_CONFIRM_DELETE', 'fabricantes.delete','JTOOLBAR_EMPTY_TRASH');
                 JToolbarHelper::editList('fabricante.edit');
                 JToolbarHelper::addNew('fabricante.add');
-                
                 
         }
 }

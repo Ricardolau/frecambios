@@ -14,7 +14,6 @@
                         description="COM_FRECAMBIOS_CRUCE_VIRTUEMART_IDREFERENCIA_DESC"
                         size="40"
                         class="inputbox"
-                        default=""
                         required="true"
                 />
                 <field

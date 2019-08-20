@@ -3,7 +3,8 @@
 defined('_JEXEC') or die;
 
 // Importar la biblioteca view de Joomla
-jimport('joomla.application.component.view');
+//~ jimport('joomla.application.component.view');
+JLoader::register('FrecambiosHelper', JPATH_ADMINISTRATOR . '/components/com_frecambios/helpers/frecambios.php');
 
 /**
  * Vista Vehiculos Marcas  */
@@ -79,7 +80,7 @@ class FrecambiosViewCrucereferenciavirts extends JViewLegacy
                 // Ponemos el nombre del titulo de la vista y el icono que seleccionemos.
                 // El icono es uno que tenemos en la carpeta /media/com_vehiculo 
 			    JToolbarHelper::title(JText::_('Cruces de productos de virtuemart con Referenciad de Fabricantes'),'joomla');
-                JToolbarHelper::deleteList('', 'crucereferenciavirt.delete');
+                JToolbarHelper::deleteList('JGLOBAL_CONFIRM_DELETE', 'crucereferenciavirts.delete','JTOOLBAR_EMPTY_TRASH');
                 JToolbarHelper::editList('crucereferenciavirt.edit');
                 JToolbarHelper::addNew('crucereferenciavirt.add');
                 

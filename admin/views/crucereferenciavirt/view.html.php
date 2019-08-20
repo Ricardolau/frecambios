@@ -4,7 +4,8 @@
 defined('_JEXEC') or die('Restricted access');
 
 // import Joomla view library
-jimport('joomla.application.component.view');
+//~ jimport('joomla.application.component.view');
+JLoader::register('FrecambiosHelper', JPATH_ADMINISTRATOR . '/components/com_frecambios/helpers/frecambios.php');
 
 /**
  * View vehiculo tipo

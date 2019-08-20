@@ -3,7 +3,8 @@
 defined('_JEXEC') or die('Restricted access');
 
 // Importar la biblioteca view de Joomla
-jimport('joomla.application.component.view');
+//~ jimport('joomla.application.component.view');
+JLoader::register('FrecambiosHelper', JPATH_ADMINISTRATOR . '/components/com_frecambios/helpers/frecambios.php');
 
 /**
  * Vista Nodelos  */
@@ -50,7 +51,7 @@ class FrecambiosViewReferencias extends JViewLegacy
         {
                 // Ponemos el nombre del titulo de la vista y el icono que seleccionemos.
                 JToolBarHelper::title(JText::_('Referencias de Fabricantes de Recambios'),'bookmark banners');
-                JToolBarHelper::deleteList('', 'referencia.delete');
+                JToolbarHelper::deleteList('JGLOBAL_CONFIRM_DELETE', 'referencias.delete','JTOOLBAR_EMPTY_TRASH');
                 JToolBarHelper::editList('referencia.edit');
                 JToolBarHelper::addNew('referencia.add');
         }
