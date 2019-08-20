@@ -79,7 +79,7 @@ class FrecambiosViewCrucereferenciavirts extends JViewLegacy
 				// Funcion que añade, titulo pagina y bottones superiores de añadir, edit y borrar.
                 // Ponemos el nombre del titulo de la vista y el icono que seleccionemos.
                 // El icono es uno que tenemos en la carpeta /media/com_vehiculo 
-			    JToolbarHelper::title(JText::_('Cruces de productos de virtuemart con Referenciad de Fabricantes'),'joomla');
+			    JToolbarHelper::title(JText::_('Cruces de productos de virtuemart con Referencias de Fabricantes'),'joomla');
                 JToolbarHelper::deleteList('JGLOBAL_CONFIRM_DELETE', 'crucereferenciavirts.delete','JTOOLBAR_EMPTY_TRASH');
                 JToolbarHelper::editList('crucereferenciavirt.edit');
                 JToolbarHelper::addNew('crucereferenciavirt.add');
