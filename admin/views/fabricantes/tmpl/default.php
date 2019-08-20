@@ -10,8 +10,6 @@ JHtml::_('formbehavior.chosen', 'select');
 //~ echo '<pre>';
 //~ print_r($this);
 //~ echo '</pre>';
-//~ $listOrder      = $this->escape($this->state->get('list.ordering', 'fa.id'));
-//~ $listDirn       = $this->escape($this->state->get('list.direction', 'DESC'));
 
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_frecambios'); ?>" method="post" name="adminForm"  id="adminForm">
@@ -20,7 +18,7 @@ JHtml::_('formbehavior.chosen', 'select');
         //~ echo '<pre>';
         //~ print_r($this);
         //~ echo '</pre>';
-        //~ echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $this));
+        echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $this));
         ?>
         <?php if (empty($this->items)) : ?>
                 

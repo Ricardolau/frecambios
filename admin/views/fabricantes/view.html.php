@@ -17,8 +17,8 @@ class FrecambiosViewFabricantes extends JViewLegacy
         public function display($tpl = null) 
         {
                 $this->state            = $this->get('State');
-				//~ $this->filterForm       = $this->get('FilterForm');
-				//~ $this->activeFilters    = $this->get('ActiveFilters');
+				$this->filterForm       = $this->get('FilterForm');
+				$this->activeFilters    = $this->get('ActiveFilters');
 				$items                  = $this->get('Items');
 				$pagination             = $this->get('Pagination');               
                 

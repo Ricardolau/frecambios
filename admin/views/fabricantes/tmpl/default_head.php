@@ -1,6 +1,9 @@
 <?php
 // No permitir el acceso directo al archivo
 defined('_JEXEC') or die('Restricted Access');
+$listOrder      = $this->escape($this->state->get('list.ordering', 'fa.id'));
+$listDirn       = $this->escape($this->state->get('list.direction', 'DESC'));
+
 ?>
 
 <tr>
