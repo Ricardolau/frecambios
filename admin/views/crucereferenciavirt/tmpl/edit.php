@@ -18,7 +18,6 @@ JFactory::getDocument()->addScriptDeclaration("
       method="post" name="adminForm" id="crucereferenciavirt-form" class="form-validate">
         <fieldset class="adminform">
                 <legend><?php echo JText::_( 'Cruce de fabricantes  con producto de virtuemart' ); ?></legend>
-                <ul class="adminformlist">
 <?php
     //~ echo '<pre>';
     //~ print_r($this->form);
@@ -26,9 +25,16 @@ JFactory::getDocument()->addScriptDeclaration("
 ?>
       
 <?php foreach($this->form->getFieldset() as $field): ?>
-                        <li><?php echo $field->label;echo $field->input;?></li>
+        <div class="control-group">
+			<div class="control-label">
+				<?php echo $field->label;?>     
+			</div>
+			<div class="controls">
+				<?php echo $field->input;?>
+			</div>
+        </div>
 <?php endforeach; ?>
-                </ul>
+
         </fieldset>
         <div>
                 <input type="hidden" name="task" value="crucereferenciavirt.edit" />

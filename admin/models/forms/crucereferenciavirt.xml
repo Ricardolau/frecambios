@@ -10,8 +10,7 @@
                         name="idReferencia"
                         type="text" 
                         default="" 
-                        label="COM_FRECAMBIOS_CRUCE_VIRTUEMART_IDREFERENCIA_LABEL"
-                        description="COM_FRECAMBIOS_CRUCE_VIRTUEMART_IDREFERENCIA_DESC"
+                        label="COM_FRECAMBIOS_SELECT_REFERENCIA_LABEL"
                         size="40"
                         class="inputbox"
                         required="true"
@@ -19,22 +18,13 @@
                 <field
                         name="virtuemart_product_id"
                         type="text"
-                        label="COM_FRECAMBIOS_CRUCE_VIRTUEMART_IDPRODUCT_LABEL"
-                        description="COM_FRECAMBIOS_CRUCE_VIRTUEMART_PRODUCT_DESC"
+                        label="COM_FRECAMBIOS_SELECT_VIRTUEMART_IDPRODUCT_LABEL"
                         size="40"
                         class="inputbox"
                         default=""
                         required="true"
                 />
-                <field
-                        name="fecha_actualizacion"
-                        type="calender"
-                        label="COM_FRECAMBIOS_VERSION_FECHAFINAL_LABEL"
-                        description="COM_FRECMABIOS_VERSION_FECHAFINAL_DESC"
-                        class="mycalendar"
-                        format="%d-%m-%Y"
-                        default=""
-                />
+                
                 
         </fieldset>
 </form>
