@@ -55,7 +55,7 @@ class JFormFieldCrucereferenciavirt extends JFormFieldList
 	{
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
-		$query->select('id', 'idFabricante', 'idReferencia', 'virtuemart_product_id', 'fecha_actualizacion');
+		$query->select('id', 'idReferencia', 'virtuemart_product_id', 'modified');
 		$query->from('#__frecambio_crucesreferenciavirt');
 		$db->setQuery((string)$query);
 		$messages = $db->loadObjectList();
@@ -64,7 +64,7 @@ class JFormFieldCrucereferenciavirt extends JFormFieldList
 		{
 			foreach($messages as $message) 
 			{
-				$options[] = JHtml::_('select.option', $message->id, $message->virtuemart_product_id,$message->idFabricante,$message->idReferencia,$message->fecha_actualizacion);
+				$options[] = JHtml::_('select.option', $message->id, $message->virtuemart_product_id,,$message->idReferencia,$message->modified);
 			}
 		}
 		$options = array_merge(parent::getOptions(), $options);

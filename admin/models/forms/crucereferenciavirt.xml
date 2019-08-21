@@ -5,17 +5,7 @@
                         name="id"
                         type="hidden"
                 />
-<!--
-                 <field
-                        name="virtuemart_product_id"
-                        type="text"
-                        label="COM_FRECAMBIOS_SELECT_VIRTUEMART_IDPRODUCT_LABEL"
-                        size="40"
-                        class="inputbox"
-                        default=""
-                        required="true"
-                />
--->
+
                 <field 
                         name="virtuemart_product_id" 
                         type="productos" 
@@ -24,6 +14,18 @@
                         required="true">
                         <option value="">COM_FRECAMBIOS_SELECT_VIRTUEMART_IDPRODUCT_LABEL</option>
                 </field>
+
+                <field 
+                        name="idFabricante" 
+                        type="sql" 
+                        default="" 
+                        description="COM_FRECAMBIOS_REFERENCIA_IDFABRICANTE_DESC"
+                        label="COM_FRECAMBIOS_REFERENCIA_IDFABRICANTE_LABEL" 
+                        query="SELECT id, fabricante FROM #__frecambio_fabricantes" 
+                        key_field="id" 
+                        value_field="fabricante" 
+                        required="true"
+                 />
                 <field 
                         name="idReferencia" 
                         type="sql" 
