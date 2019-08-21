@@ -5,17 +5,8 @@
                         name="id"
                         type="hidden"
                 />
-                
+<!--
                  <field
-                        name="idReferencia"
-                        type="text" 
-                        default="" 
-                        label="COM_FRECAMBIOS_SELECT_REFERENCIA_LABEL"
-                        size="40"
-                        class="inputbox"
-                        required="true"
-                />
-                <field
                         name="virtuemart_product_id"
                         type="text"
                         label="COM_FRECAMBIOS_SELECT_VIRTUEMART_IDPRODUCT_LABEL"
@@ -24,7 +15,29 @@
                         default=""
                         required="true"
                 />
+-->
+                <field 
+                        name="virtuemart_product_id" 
+                        type="productos" 
+                        label="COM_FRECAMBIOS_SELECT_VIRTUEMART_IDPRODUCT_LABEL"   
+                        class="chzn-select input-xxlarge"                        
+                        required="true">
+                        <option value="">COM_FRECAMBIOS_SELECT_VIRTUEMART_IDPRODUCT_LABEL</option>
+                </field>
+                <field 
+                        name="idReferencia" 
+                        type="sql" 
+                        default="" 
+                        description="COM_FRECAMBIOS_REFERENCIA_DESC"
+                        label="COM_FRECAMBIOS_REFERENCIA_LABEL" 
+                        query="SELECT id, referencia FROM #__frecambio_referencias" 
+                        key_field="id" 
+                        value_field="referencia" 
+                        required="true"
+                 />
                 
+
+               
                 
         </fieldset>
 </form>

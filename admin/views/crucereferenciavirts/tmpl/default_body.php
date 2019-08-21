@@ -22,7 +22,7 @@ defined('_JEXEC') or die('Restricted Access');
                 echo $item->idReferencia; ?>
 			</td>
 			<td>
-					<?php echo $item->fecha_actualizacion; ?>
+					<?php echo $item->modified; ?>
 			</td>
         </tr>
 <?php endforeach; ?>
