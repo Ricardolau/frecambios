@@ -5,6 +5,7 @@
                         name="id"
                         type="hidden"
                 />
+<!--
                 <field 
                         name="idFabricante" 
                         type="sql" 
@@ -16,19 +17,18 @@
                         value_field="fabricante" 
                         required="true"
                  />
+-->
 
-<!--
+
                 <field 
                         name="idFabricante" 
                         type="fabricante" 
                         label="COM_FRECAMBIOS_REFERENCIA_IDFABRICANTE_LABEL"   
-                        class="chzn-select"
-                        onchange="Frecambios.updateSelect(this, 'jform_idFabricante', 'fabricantes');"
+                        class="chzn-select input-xxlarge"
                         required="true">
                         <option value="">COM_FRECAMBIOS_REFERENCIA_IDFABRICANTE_LABEL</option>
-                </field>              
-                        
--->
+                </field>
+                            
 
                 <field
                         name="referencia"

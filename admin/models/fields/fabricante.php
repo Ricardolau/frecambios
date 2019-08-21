@@ -31,9 +31,9 @@ class JFormFieldFabricante extends JFormFieldList
 	{                
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true)
-                        ->select('id as value, fabricante as text')
+                        ->select('id as value, CONCAT(id," ",fabricante) as text')
                         ->from('#__frecambio_fabricantes')
-                        ->order ('nombre ASC');
+                        ->order ('TRIM(fabricante) ASC');
 		$db->setQuery($query);                
                 
 		try
