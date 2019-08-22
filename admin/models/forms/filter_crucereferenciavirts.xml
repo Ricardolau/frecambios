@@ -27,6 +27,7 @@
                         <option value="">Seleccione una Fabricante</option>
                 </field>
               
+<!--
                 <field 
                         name="idReferencia" 
                         type="referencia" 
@@ -36,6 +37,7 @@
                         >
                         <option value="">Seleccione un Referencia</option>
                 </field> 
+-->
                 
 				
 	</fields>

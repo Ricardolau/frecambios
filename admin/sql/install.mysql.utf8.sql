@@ -18,7 +18,7 @@ DROP TABLE IF EXISTS `#__frecambio_referencias`;
 CREATE TABLE `#__frecambio_referencias` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `idFabricante` INT(11) NOT NULL,
-  `referencia` VARCHAR(25) NOT NULL,
+  `referencia` VARCHAR(50) NOT NULL,
   `created` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
