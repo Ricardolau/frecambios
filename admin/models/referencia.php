@@ -55,4 +55,19 @@ class FrecambiosModelReferencia extends JModelAdmin
                 }
                 return $data;
         }
+
+        public function save($data)
+        {                
+                $usuario = $user = JFactory::getUser();
+                $fecha = JFactory::getDate ();
+                if ($data['id'] === 0){
+                    // Es un item nuevo.
+                    $data['created'] = $fecha->toSql ();
+                    $data['created_by'] = $usuario->id;
+                }
+                $data['modified'] = $fecha->toSql ();
+                $data['modified_by'] = $usuario->id;
+                
+                return parent::save ($data);
+        }     
 }
