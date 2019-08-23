@@ -37,20 +37,35 @@ class JFormFieldReferencia extends JFormFieldList
 	protected function getOptions() 
 	{
 		$db = JFactory::getDBO();
-		$query = $db->getQuery(true);
-		$query->select('id,idFabricante,referencia');
-		$query->from('#__frecambio_referencias');
-		$db->setQuery((string)$query);
-		$messages = $db->loadObjectList();
-		$options = array();
-		if ($messages)
-		{
-			foreach($messages as $message) 
-			{
-				$options[] = JHtml::_('select.option', $message->id, $message->idFabricante, $message->referencia);
-			}
-		}
-		$options = array_merge(parent::getOptions(), $options);
-		return $options;
+        // Get Referencia from form or filter form
+        $fFabricante         = $this->form->getField ('idFabricante'); 
+        if (empty($fFabricante)) {                        
+                $idFabricante = $this->form->getField ('idFabricante', 'filter')->value;
+        } else {
+                $f=json_encode($this->form->getField ('idFabricante'));
+                error_log('Entro'.$f);
+                $idFabricante = $this->form->getField ('idFabricante')->value;
+                
+        }
+              
+        
+
+        if (! empty ($idFabricante)) {
+            $query = $db->getQuery(true)
+                ->select('id,idFabricante,referencia')
+                ->from('#__frecambio_referencias')
+                ->where ('idFabricante = ' . (int) $idFabricante);
+
+                               
+            $db->setQuery((string)$query);
+            $db->setQuery($query);                
+
+                try {
+                        $options = $db->loadObjectList();                             
+                } catch (RuntimeException $e) {
+                        JError::raiseWarning(500, $e->getMessage);
+                }              
+        }
+		return array_merge(parent::getOptions(), $options);
 	}
 }

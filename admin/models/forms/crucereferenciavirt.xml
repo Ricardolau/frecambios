@@ -21,23 +21,22 @@
                         default="" 
                         description="COM_FRECAMBIOS_REFERENCIA_IDFABRICANTE_DESC"
                         label="COM_FRECAMBIOS_REFERENCIA_IDFABRICANTE_LABEL" 
-                        query="SELECT id, fabricante FROM #__frecambio_fabricantes" 
+                        query="SELECT id, fabricante FROM #__frecambio_fabricantes"
+                        onchange="Frecambios.updateSelect(this, 'jform_idReferencia', 'referencias');"
                         key_field="id" 
                         value_field="fabricante" 
                         required="true"
                  />
+
                 <field 
                         name="idReferencia" 
-                        type="sql" 
-                        default="" 
-                        description="COM_FRECAMBIOS_REFERENCIA_DESC"
-                        label="COM_FRECAMBIOS_REFERENCIA_LABEL" 
-                        query="SELECT id, referencia FROM #__frecambio_referencias" 
-                        key_field="id" 
-                        value_field="referencia" 
-                        required="true"
-                 />
-                
+                        type="referencia" 
+                        label="COM_FRECAMBIOS_REFERENCIA_LABEL"   
+                        class="chzn-select"
+                        required="true">
+                        <option value="">COM_VEHICULO_SELECT_MARCA_LABEL</option>
+                </field>
+
 
                
                 
