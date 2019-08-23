@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="component" version="2.5.0" method="upgrade">
+<extension type="component" version="3.1" method="upgrade">
 
-        <name>COM_FRECAMBIOS</name>
+        <name>com_frecambios</name>
 
         <!-- Los siguientes elementos son opcionales y sin restricciones de formato -->
         <creationDate>Septiembre 2019</creationDate>
@@ -15,7 +15,7 @@
         <version>0.1.0</version>
 
         <!-- La descripción es opcional. Por defecto se introduce el nombre del componente -->
-        <description>COM_FRECAMBIOS_DESCRIPTION</description>
+        <description>COM_FRECAMBIOS_XML_DESCRIPTION</description>
 
         <install> <!-- Se ejecuta en la instalación -->
                 <sql>
