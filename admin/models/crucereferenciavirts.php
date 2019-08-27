@@ -46,18 +46,9 @@ class FrecambiosModelCrucereferenciavirts extends JModelList
                 $search = $this->getState('filter.search');
                 if (!empty($search))
                 {
-                    if (stripos($search, 'id:') === 0)
-                    {
-                                        // Search id:1234
-                        $query->where('cr.id = ' . (int) substr($search, 3));
-                    }elseif (stripos($search, 'id_producto:') === 0)	{
-                                        // Search id:1234
-                        $query->where('cr.virtuemart_product_id = ' . (int) substr($search, 12));
-                    } else {
-                                        // Search %abcd%
+                    // Search %abcd%
                         $search = $db->quote('%' . str_replace(' ', '%', $db->escape(trim($search), true) . '%'));
-                        $query->where('virt.product_name LIKE ' . $search );
-                    }
+                        $query->where('re.referencia LIKE ' . $search );
                 }                    
                 // Producto filter                
                 $idProductos = $this->getState('filter.idProductos');

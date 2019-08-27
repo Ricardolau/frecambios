@@ -12,14 +12,15 @@ defined('_JEXEC') or die('Restricted Access');
 			<td>
 				<?php 
 				$idProducto = $item->virtuemart_product_id;
-				echo '<a title="id_producto" href="index.php?option=com_virtuemart&view=product&task=edit&virtuemart_product_id='.$idProducto.'">'.$idProducto.'</a> ';
+				echo '<a title="'.$idProducto.'" href="index.php?option=com_virtuemart&view=product&task=edit&virtuemart_product_id='.$idProducto.'">'.
+                '<span class="icon-cart large-icon"> </span></a> ';
 				      echo $item->product_name;
 				?>
 			</td>
 			<td>
                 <?php
                 // Lo ideal seria mostrar Fabricantes y referencia
-                echo $item->idReferencia; ?>
+                echo '<span class="icon-eye large-icon" title="Id de tabla de referencia '.$item->idReferencia.'"></span>'.$item->fabricante.': '.$item->referencia;?>
 			</td>
 			<td>
 					<?php echo $item->modified; ?>

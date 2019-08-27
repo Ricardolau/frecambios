@@ -43,7 +43,6 @@ class JFormFieldReferencia extends JFormFieldList
                 $idFabricante = $this->form->getField ('idFabricante', 'filter')->value;
         } else {
                 $f=json_encode($this->form->getField ('idFabricante'));
-                error_log('Entro'.$f);
                 $idFabricante = $this->form->getField ('idFabricante')->value;
                 
         }
