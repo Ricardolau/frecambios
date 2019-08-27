@@ -7,7 +7,7 @@ defined('_JEXEC') or die;
 JLoader::register('FrecambiosHelper', JPATH_ADMINISTRATOR . '/components/com_frecambios/helpers/frecambios.php');
 
 /**
- * Vista Vehiculos Marcas  */
+ * Vista Fabricantes  */
 class FrecambiosViewFabricantes extends JViewLegacy
 {
         /**
@@ -52,7 +52,7 @@ class FrecambiosViewFabricantes extends JViewLegacy
         {
 				// Funcion que añade, titulo pagina y bottones superiores de añadir, edit y borrar.
                 // Ponemos el nombre del titulo de la vista y el icono que seleccionemos.
-                // El icono es uno que tenemos en la carpeta /media/com_vehiculo 
+                // El icono es uno que tenemos en la carpeta /media/com_frecambios 
 			    JToolbarHelper::title(JText::_('Fabricantes de recambios'),'fabricantes');
                 JToolbarHelper::deleteList('JGLOBAL_CONFIRM_DELETE', 'fabricantes.delete','JTOOLBAR_EMPTY_TRASH');
                 JToolbarHelper::editList('fabricante.edit');

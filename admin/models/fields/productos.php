@@ -19,7 +19,7 @@ defined('_JEXEC') or die;
 JFormHelper::loadFieldClass('list');
 
 /**
- * Modelo Form Field class for the Vehiculo component
+ * Modelo Form Field class for the frecambios component
  */
 class JFormFieldProductos extends JFormFieldList {	
 	

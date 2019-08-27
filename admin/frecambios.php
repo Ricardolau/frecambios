@@ -15,7 +15,7 @@ JHtml::_('formbehavior.chosen', 'select.chzn-select');
 // Load script tools
 JHtml::_('script', JUri::root() . 'administrator/components/com_frecambios/assets/js/frecambios.js', false, false);
 
-// Obtener una instancia del controlador prefijado por vehiculo
+// Obtener una instancia del controlador prefijado
 $task       = JFactory::getApplication()->input->get('task');
 
 $controller = JControllerLegacy::getInstance('frecambios');

@@ -18,7 +18,7 @@ defined('_JEXEC') or die;
 //~ JFormHelper::loadFieldClass('list');
 
 /**
- * Vehiculo Form Field class for the Vehiculo component
+ * Form Field class for the frecambios component
  */
 class JFormFieldCrucereferenciavirt extends JFormFieldList
 {

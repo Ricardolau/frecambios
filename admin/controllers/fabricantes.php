@@ -36,7 +36,7 @@ class FrecambiosControllerFabricantes extends JControllerAdmin
 		// Get the model
 		$model = $this->getModel();
  
-		$return = $model->vehiculo($pks);
+		$return = $model->frecambios($pks);
  
 		// Redirect to the list screen.
 		$this->setRedirect(JRoute::_('index.php?option=com_frecambios&view=fabricantes', false));

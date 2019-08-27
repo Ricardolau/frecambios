@@ -4,7 +4,7 @@ defined('_JEXEC') or die;
 // Importar biblioteca modellist de Joomla
 //~ jimport('joomla.application.component.modellist');
 /**
- * VehiculoList Model
+ * Modelos de lista fabrincantes
  */
 class FrecambiosModelFabricantes extends JModelList
 {

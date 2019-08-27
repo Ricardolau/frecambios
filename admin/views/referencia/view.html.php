@@ -58,8 +58,8 @@ class FrecambiosViewReferencia extends JViewLegacy
 	{
 		$isNew = ($this->item->id < 1);
 		$document = JFactory::getDocument();
-		$document->setTitle($isNew ? JText::_('Creando nuevo modelo de Vehiculo')
-		                           : JText::_('Editando modelo de Vehiculo'));
+		$document->setTitle($isNew ? JText::_('Creando nuevo referencia de fabricante')
+		                           : JText::_('Editando referencia de fabricante'));
 		$document->addScript(JURI::root() . $this->script);
 		$document->addScript(JURI::root() . "/administrator/components/com_frecambios"
 		                                  . "/views/referencia/submitbutton.js");

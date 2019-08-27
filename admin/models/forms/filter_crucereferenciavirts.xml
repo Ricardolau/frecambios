@@ -5,13 +5,13 @@
 			name="search"
 			type="text"
 			label="COM_FRECAMBIOS_FILTER_SEARCH_LABEL_REFERENCIA"
-			description="COM__FRECAMBIOS_FILTER_SEARCH_DESC_REFERENCIA"
+			description="COM_FRECAMBIOS_FILTER_SEARCH_DESC_REFERENCIA"
 			hint="COM_FRECAMBIOS_FILTER_SEARCH_LABEL_REFERENCIA"
 		/>
                  <field 
                         name="idProductos" 
                         type="productos" 
-                        label="COM_VEHICULO_CRUCE_VIRTUEMART_HEADING_PRODUCT"   
+                        label="COM_FRECAMBIOS_CRUCE_VIRTUEMART_HEADING_PRODUCT"   
                         class="chzn-select"
                         onchange="this.form.submit();"
                         >
@@ -22,22 +22,12 @@
                         type="fabricante" 
                         label="COM_FRECAMBIOS_FABRICANTE_CRUCE_LABEL"   
                         class="chzn-select"
-                        onchange="Vehiculo.updateSelect(this, 'filter_idFabricante', 'fabricantes'); return false;"
+                        onchange="Frecambios.updateSelect(this, 'filter_idFabricante', 'fabricantes'); return false;"
                 >
                         <option value="">Seleccione una Fabricante</option>
                 </field>
               
-<!--
-                <field 
-                        name="idReferencia" 
-                        type="referencia" 
-                        label="COM_FRECAMBIOS_REFERENCIA_CRUCE_LABEL"   
-                        class="chzn-select"
-                        onchange="Vehiculo.updateSelect(this, 'filter_idReferencia', 'referencias'); return false;"
-                        >
-                        <option value="">Seleccione un Referencia</option>
-                </field> 
--->
+
                 
 				
 	</fields>

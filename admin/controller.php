@@ -6,7 +6,7 @@ defined('_JEXEC') or die;
  
 
 /**
- * General Controller of Vehiculo component
+ * General Controller of Fabricantes component
  */
 class FrecambiosController extends JControllerLegacy
 {

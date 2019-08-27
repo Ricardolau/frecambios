@@ -34,7 +34,7 @@
                         label="COM_FRECAMBIOS_REFERENCIA_LABEL"   
                         class="chzn-select"
                         required="true">
-                        <option value="">COM_VEHICULO_SELECT_MARCA_LABEL</option>
+                        <option value="">COM_FRECAMBIOS_REFERENCIA_LABEL</option>
                 </field>
 
 

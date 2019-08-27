@@ -17,7 +17,6 @@ defined('_JEXEC') or die('Restricted Access');
         <th width="10">
 			<?php echo JHtml::_('searchtools.sort', 'COM_FRECAMBIOS_REFERENCIAS_HEADING_REFERENCIA', 're.referencia'); ?>
 
-                <?php //echo JText::_('COM_VEHICULO_NODELOS_HEADING_NOMBREMODELO'); ?>
         </th>
         
 </tr>

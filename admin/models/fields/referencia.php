@@ -18,7 +18,7 @@ jimport('joomla.form.helper');
 JFormHelper::loadFieldClass('list');
 
 /**
- * Nodelo Form Field class for the Vehiculo component
+ * Referencia Form Field class for the frecambios component
  */
 class JFormFieldReferencia extends JFormFieldList
 {
