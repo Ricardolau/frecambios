@@ -17,12 +17,24 @@
                         >
                         <option value="">Seleccione un Producto</option>
                 </field> 
+<!--
                 <field 
                         name="idFabricante" 
                         type="fabricante" 
                         label="COM_FRECAMBIOS_FABRICANTE_CRUCE_LABEL"   
                         class="chzn-select"
                         onchange="Frecambios.updateSelect(this, 'filter_idFabricante', 'fabricantes'); return false;"
+                >
+                        <option value="">Seleccione una Fabricante</option>
+                </field>
+              
+-->
+                <field 
+                        name="idFabricante" 
+                        type="fabricante" 
+                        label="COM_FRECAMBIOS_FABRICANTE_CRUCE_LABEL"   
+                        class="chzn-select"
+                        onchange="this.form.submit();"
                 >
                         <option value="">Seleccione una Fabricante</option>
                 </field>
