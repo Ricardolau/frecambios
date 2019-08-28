@@ -51,9 +51,44 @@ class FrecambiosModelCrucereferenciavirt extends JModelAdmin
                 $data = JFactory::getApplication()->getUserState('com_frecambios.edit.crucereferenciavirt.data', array());
                 if (empty($data)) 
                 {
-                        $data = $this->getItem();
+                   $data = $this->getItem();
+                }
+                if ($data->idFabricante >0){
+                    // esta editando.
+                    error_log('Editando');
                 }
                 return $data;
+        }
+        protected function preprocessForm(JForm $form, $data, $group = 'frecambios')
+        {
+            if ($data->id >0 )
+            {
+                //~ $form->setFieldAttribute('catid', 'allowAdd', 'true');
+                $db = $this->getDbo();
+				$query = $db->getQuery(true)
+					->select('idFabricante,referencia')
+					->from('#__frecambio_referencias')
+                    ->where('id = '.$data->idReferencia);
+                $db->setQuery($query);
+               
+
+                try
+                {
+                    $registro = $db->loadObjectList();
+                }
+                catch (RuntimeException $e)
+                {
+                    $this->setError($e->getMessage());
+
+                    return false;
+                }
+                $data->set('idFabricante',$registro[0]->idFabricante);
+                $data->set('idReferencia',$registro[0]->referencia);
+
+                error_log(json_encode($registro));
+            }
+
+            parent::preprocessForm($form, $data, $group);
         }
 
         public function save($data)
