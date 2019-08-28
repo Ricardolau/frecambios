@@ -75,6 +75,8 @@ class FrecambiosModelCrucereferenciavirt extends JModelAdmin
                 try
                 {
                     $registro = $db->loadObjectList();
+                    $data->set('idFabricante',$registro[0]->idFabricante);
+                    $data->set('idReferencia',$data->idReferencia);
                 }
                 catch (RuntimeException $e)
                 {
@@ -82,10 +84,8 @@ class FrecambiosModelCrucereferenciavirt extends JModelAdmin
 
                     return false;
                 }
-                $data->set('idFabricante',$registro[0]->idFabricante);
-                $data->set('idReferencia',$registro[0]->referencia);
+                
 
-                error_log(json_encode($registro));
             }
 
             parent::preprocessForm($form, $data, $group);
