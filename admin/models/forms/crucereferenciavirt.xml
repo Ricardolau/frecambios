@@ -18,7 +18,8 @@
                 <field 
                         name="idFabricante" 
                         type="sql" 
-                        default="" 
+                        default=""
+                        class="chzn-select"
                         description="COM_FRECAMBIOS_REFERENCIA_IDFABRICANTE_DESC"
                         label="COM_FRECAMBIOS_REFERENCIA_IDFABRICANTE_LABEL" 
                         query="SELECT id, fabricante FROM #__frecambio_fabricantes"

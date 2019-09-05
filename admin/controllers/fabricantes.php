@@ -43,5 +43,21 @@ class FrecambiosControllerFabricantes extends JControllerAdmin
  
 		}
 
+        public function delete () {
+
+            $app = JFactory::getApplication();
+
+            // Calcular si tiene hijos
+            
+            if (false) {
+                // Si no tiene hijos
+                return parent::delete();
+            } else {
+                $app->enqueueMessage ("CONST no se puede borrar poe que tiene hujos", 'error');
+                $this->redirect ('index.php?option=...');
+                return false;
+            }
+        }
+
 
 }

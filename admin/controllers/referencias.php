@@ -35,20 +35,36 @@ class FrecambiosControllerReferencias extends JControllerAdmin
                         ->from ('#__frecambio_referencias')
                         ->where ('idFabricante = ' . (int) $idFabricante);
                 
-		$db->setQuery($query);                
-                
-		try
-		{
-			$options = $db->loadObjectList();                             
-		}
-		catch (RuntimeException $e)
-		{
-			JError::raiseWarning(500, $e->getMessage);
-		}                 
+                $db->setQuery($query);                
+                        
+                try
+                {
+                    $options = $db->loadObjectList();                             
+                }
+                catch (RuntimeException $e)
+                {
+                    JError::raiseWarning(500, $e->getMessage);
+                }                 
                 
                 // Send JSon encoded data
                 echo json_encode($options);                               
                 $app->close ();
+        }
+
+         public function delete () {
+
+            $app = JFactory::getApplication();
+
+            // Calcular si tiene hijos
+            
+            if (false) {
+                // Si no tiene hijos
+                return parent::delete();
+            } else {
+                $app->enqueueMessage ("CONST no se puede borrar poe que tiene hujos", 'error');
+                $this->redirect ('index.php?option=...');
+                return false;
+            }
         }
         
 }
