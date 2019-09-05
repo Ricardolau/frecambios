@@ -51,7 +51,7 @@ class JFormFieldReferencia extends JFormFieldList
 
         if (! empty ($idFabricante)) {
             $query = $db->getQuery(true)
-                ->select('id,idFabricante,referencia')
+                ->select('id as value,referencia as text')
                 ->from('#__frecambio_referencias')
                 ->where ('idFabricante = ' . (int) $idFabricante);
 
